@@ -1,3 +1,9 @@
+// buider design pattern is uded to design complex Objects
+//step wise step
+
+
+
+
 // Car class with optional features
 class Car {
     seats: number | undefined;
