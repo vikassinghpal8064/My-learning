@@ -51,18 +51,18 @@ class MacFactory implements GUIFactory {
 }
 class Application1 {
     private factory: GUIFactory;
-    private button: Button;
+    //private button: Button;
 
     constructor(factory: GUIFactory) {
         this.factory = factory;
     }
 
     createUI(): void {
-        this.button = this.factory.createButton();
+        //this.button = this.factory.createButton();
     }
 
     paint(): void {
-        this.button.paint();
+        //this.button.paint();
     }
 }
 class ApplicationConfigurator {
