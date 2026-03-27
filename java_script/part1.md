@@ -25,7 +25,7 @@ function capitalize(str){
     
     my_string=my_string+str.charAt(i++).toUpperCase();
     for(i=i;i<str.length;i++){
-     if(str[i]=' '){
+     if(str[i]==' '){
         my_string=my_string+str.charAt(i++).toUpperCase();
         //i--;
 
@@ -94,3 +94,22 @@ if (n%3==0 & n%5==0){
 }
 ```
 
+6. Factorial of a Number  
+Write a function factorial(n) that returns the factorial of n.  
+Example: 5 → 120
+
+```javascript
+
+```
+7. Check Prime Number  
+Write a function isPrime(n) that checks if n is prime.  
+Example: 7 → true
+8. Find the Sum of All Even Numbers up to N  
+Write a function sumEven(n) that returns the sum of all even numbers from 1 to n.  
+Example: 10 → 30
+9. Reverse a Number  
+Write a function reverseNumber(num) that reverses the digits of a number.  
+Example: 1234 → 4321
+10. Find the Smallest Number in an Array  
+e a function `finfindMin(arr)t returns the smallest number in an array.  
+ple: `[5,[5, 2, 9, 1] `1`1

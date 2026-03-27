@@ -80,4 +80,4 @@ function check_armstrong(num){
     return my_num==num ;
 }
 
-console.log(check_armstrong(143));
+console.log(check_armstrong(153));
