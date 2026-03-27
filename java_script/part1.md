@@ -1,5 +1,5 @@
 # 50 Questions of javaScript.
-
+![](https://miro.medium.com/v2/resize:fit:1400/1*a7gVJM7cMGFxGZGg-SVXUg.jpeg)
 1. Write a function sumDigits(num) that returns the sum of all digits in a number.  
 Example: 1234 → 10
 
