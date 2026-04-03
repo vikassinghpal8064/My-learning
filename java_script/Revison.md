@@ -69,13 +69,13 @@ Want me to deep-dive any of these topics with explanations + code examples? I ca
 
 
   note this code : 
-  '''javascript
+  ```javascript
 say();        // here you will get the error say is not a function but if you use let and const
               // in place of var , you will get error of saying you cannot use variable intialization
 var say=function (){
                         console.log("hello")
                         }
-'''
+```
 # DTZ(dead temporal zone)
    when a particular variable is hoisted and when it is intialized during that time the variable is in
    the memory but remain non accessible . this period is called DTZ
@@ -89,7 +89,7 @@ console.log(name);
 
 # SCOPE(GLOBAL, FUNCTIONAL, AND BLOCK)
 
-'''javascript
+```javascript
 
   function none(){
 if(true){
@@ -105,11 +105,11 @@ console.log(b);
 
 none()
 
-'''
+```
 
 #  CLOSURE
  
- '''javascript
+ ```javascript
 
    function outer(){
     let firstName="Vikas";                         //  this is the example of simple closure, as the inner function
@@ -125,10 +125,51 @@ none()
 
 console.log(outer());
 
-'''
+```
 
 # important screenshot to consider
 
 ![firstOne](../Resorces/Screenshot%202026-04-03%20at%2011.42.59 AM.png)
 
 ![SecondOne](../Resorces//Screenshot%202026-04-03%20at%2011.46.45 AM.png)
+
+# Async , Await, Callback Functions, Promises
+
+1. CallBack Hell
+
+```javascript
+// lets assume we want to make icecream step by step
+
+// 1 sec for preparing milk
+// 2 sec for cutting fruits
+// 2 sec for stirring and adding icrcream powder
+// 3 second for refrigation
+
+function prepareIcecream(){
+    console.log('icrcream making has been started');
+    console.log("preparing milk");
+    setTimeout(()=>{
+        console.log("milk prepared");
+        console.log("cutting fruits");
+        setTimeout(()=>{
+          console.log("fruits has been chopped"); 
+          console.log("stirring and adding icrcream powder"); 
+          setTimeout(()=>{
+            console.log("stirred properly");
+            console.log("starting refrigartion")
+            setTimeout(()=>{
+                console.log("you icecream is chilled now now you can eat");
+            },3000)
+          },2000)
+
+        },2000)
+    },1000)
+}
+
+prepareIcecream()
+```
+
+2. now hoe to handle this issues we have promises
+![promiseStructure](../Resorces//Screenshot%202026-04-03%20at%2012.16.08 PM.png)
+
+

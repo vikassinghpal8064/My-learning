@@ -23,61 +23,33 @@ var Database = /** @class */ (function () {
 //--------------------------------------------------------------
 
 
-function add_all_number(num){
-  let string_num= num.toString();
-  let sum=0;
-  for (let i=0;i<string_num.length;i++){
-    let val = parseInt(string_num[i]);
-    sum=sum+val;
-  }
-  return sum;
+// lets asume we want to make icecream step by step
+
+// 1 sec for preparing milk
+// 2 sec for cutting fruits
+// 2 sec for stirring and adding icrcream powder
+// 3 second for refrigation
+
+function prepareIcecream(){
+    console.log('icrcream making has been started');
+    console.log("preparing milk");
+    setTimeout(()=>{
+        console.log("milk prepared");
+        console.log("cutting fruits");
+        setTimeout(()=>{
+          console.log("fruits has been chopped"); 
+          console.log("stirring and adding icrcream powder"); 
+          setTimeout(()=>{
+            console.log("stirred properly");
+            console.log("starting refrigartion")
+            setTimeout(()=>{
+                console.log("you icecream is chilled now now you can eat");
+            },3000)
+          },2000)
+
+        },2000)
+    },1000)
 }
 
-console.log(add_all_number(78912345));
-let i=0;
-function capitalize(str){
-    let my_string="";
-    
-    my_string=my_string+str.charAt(i++).toUpperCase();
-    for(i=i;i<str.length;i++){
-     if(str[i]=' '){
-        my_string=my_string+str.charAt(i++).toUpperCase();
-        //i--;
+prepareIcecream()
 
-     }
-     else{
-       my_string= my_string+str.charAt(i);
-     }
-
-    }
-    return my_string;
-}
-
-console.log(capitalize("hello my name is vikas"))
-
-
-
-function find_vowel(str){
-    let count=0;
-  let vowel_string="aeiouAEIOU"
-   for(let i=0;i<str.length;i++){
-    if(vowel_string.includes(str.charAt(i))){
-        count++;
-    }
-    
-   }
-   return count;
-}
-console.log(find_vowel("AeiouAEIOUpmln"));
-
-function check_armstrong(num){
-    let my_num=0
-    let str_num= num.toString();
-    for (let i=0;i<str_num.length;i++){
-        let num= parseInt(str_num[i]);
-        my_num=my_num+num*num*num;
-    }
-    return my_num==num ;
-}
-
-console.log(check_armstrong(153));
