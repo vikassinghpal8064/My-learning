@@ -1,5 +1,5 @@
 
-#🟢 Beginner (1–15)
+# 🟢 Beginner (1–15)
 
 
 1.Data types & type coercion
@@ -18,7 +18,7 @@
 14.String methods (slice, split, trim, etc.)
 15.typeof operator
 
-#🟡 Intermediate (16–35)
+# 🟡 Intermediate (16–35)
 
 1.Hoisting
 2.Scope — global, function, block
@@ -40,7 +40,8 @@ setTimeout vs setInterval
 DOM manipulation basics
 Event bubbling & capturing
 localStorage vs sessionStorage vs cookies
-🔴 Advanced (36–50)
+
+# 🔴 Advanced (36–50)
 
 Microtasks vs macrotasks (task queue)
 Generator functions (function*)
@@ -314,9 +315,28 @@ console.log(Person.subject);
 console.log(Person.subject?.something);
 
 console.log(Person.subject ?? "english") // nullish value if something is null or undeined then other thing will work
+```
+
+# Use of setTimeout(), setTimeinterval() and setImmediate(only in node js)
+```javascript
+// Three Api setInterval, setTimeout,setImmediate
+let val=10
+setTimeout(()=>{
+    val++;
+    console.log("i am running with speed "+val);
+},2000)
+let count=0;
+let id=setInterval(()=>{
+    count++;
+    if(count==5){
+     clearInterval(id);
+    }
+    else{
+        console.log("i am running .....")
+    }
+},1000);
 
 ```
 
-# PDF file to refer
 
-[javascript](https://drive.google.com/file/d/19fQKdvVzoRcbOSRgsjDFmFzy5VdkBhXJ/view?usp=drive_link)
+

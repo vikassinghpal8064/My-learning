@@ -23,19 +23,5 @@ var Database = /** @class */ (function () {
 //--------------------------------------------------------------
 
 
-let Person={
-    name:"vikas singh pal",
-    phone:"8287216314",
-    address:{
-        street:"mohan garden",
-        city:"new Delhi",
-        State:"Delhi",
-    },
-    //subject:null,
-}
 
-console.log(Person.subject);
-console.log(Person.subject?.something);
-
-console.log(Person.subject ?? "english") // nullish value if something is null or undeined then other thing will work
 
