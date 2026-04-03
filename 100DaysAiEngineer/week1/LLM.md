@@ -10,3 +10,4 @@
 
 2. Embeddings
 understand this thing like list of numbers called vectors, comuputers doesnot understand words but do understand numbers, so wen we give something to LLMs it converts into vectors this process is called embeddings.
+
