@@ -169,7 +169,154 @@ function prepareIcecream(){
 prepareIcecream()
 ```
 
-2. now hoe to handle this issues we have promises
+2. now how to handle this issues we have promises
 ![promiseStructure](../Resorces//Screenshot%202026-04-03%20at%2012.16.08 PM.png)
+ 
+* .then work when the promise is resolved and .catch works when the promise is rejected
+* Exampkle showing .then and .catch chaining
+
+```javascript
+function handlePromise(){
+    let val= Math.floor(Math.random()*100);
+    console.log(val);
+   
+  if(val%2==0){
+    return new Promise((resolve,reject)=>{
+        resolve(val);
+    })
+  }
+  else{
+    return new Promise((resolve, reject)=>{
+        reject("rejected as the value is odd")
+    })
+  }
+
+}
+//handlePromise().then();
+console.log(handlePromise().then((val)=>{
+console.log(`value is resolved with value ${val}`);
+})
+.catch((val)=>{
+console.log(val);
+}))
+```
+
+* This is the new way of the promises Try and catch
+
+``` javascript
+function handlePromise(){
+    let val= Math.floor(Math.random()*100);
+    console.log(val);
+   
+  if(val%2==0){
+    return new Promise((resolve,reject)=>{
+        resolve(val);
+    })
+  }
+  else{
+    return new Promise((resolve, reject)=>{
+        reject("rejected as the value is odd")
+    })
+  }
+
+}
+async function handTryandCatch(){
+    console.log("fetching data so wait")
+try{
+    let res= await handlePromise();
+    
+    console.log("your promise is accepted with value"+ res);
+ 
+}
+catch(err){
+    console.log(err)
+}
+
+}
+handTryandCatch();
 
 
+```
+
+# Shallow Vs Deep Copy
+
+```javascript
+let Person={
+    name:"vikas singh pal",
+    phone:"8287216314",
+    address:{
+        street:"mohan garden",
+        city:"new Delhi",
+        State:"Delhi",
+    }
+}
+
+let shallowCopy= {...Person};
+shallowCopy.address.State="mumbai";
+console.log(shallowCopy);
+```
+* note in above code if you copy the object and update the value it also update the original object as well whic you dont want then use Deep Copy
+
+* Use of structuredClone(obj)
+
+```javascript
+let Person={
+    name:"vikas singh pal",
+    phone:"8287216314",
+    address:{
+        street:"mohan garden",
+        city:"new Delhi",
+        State:"Delhi",
+    }
+}
+
+let shallowCopy= structuredClone(Person);
+shallowCopy.address.State="mumbai";
+console.log(shallowCopy);
+console.log(Person);
+```
+
+# Use of Object.keys() , Object.values(), Object.entries();
+
+```javascript
+let Person={
+    name:"vikas singh pal",
+    phone:"8287216314",
+    address:{
+        street:"mohan garden",
+        city:"new Delhi",
+        State:"Delhi",
+    }
+}
+
+let shallowCopy= structuredClone(Person);
+shallowCopy.address.State="mumbai";
+console.log(Object.keys(Person)) // it retuen array of Keys
+console.log(Object.values(Person));// it returns array of Values
+
+console.log(Object.entries(Person));// it return Array of matrix ecah element contains 2 values
+```
+# Optional Chaining (?.) and Nullish Coalescing (`??`)
+
+``` javascript
+let Person={
+    name:"vikas singh pal",
+    phone:"8287216314",
+    address:{
+        street:"mohan garden",
+        city:"new Delhi",
+        State:"Delhi",
+    },
+    //subject:null,
+}
+
+console.log(Person.subject);
+console.log(Person.subject?.something);
+
+console.log(Person.subject ?? "english") // nullish value if something is null or undeined then other thing will work
+
+```
+
+# PDF file to refer
+
+[javascript](https://drive.google.com/file/d/19fQKdvVzoRcbOSRgsjDFmFzy5VdkBhXJ/view?usp=drive_link)
