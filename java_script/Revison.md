@@ -338,5 +338,11 @@ let id=setInterval(()=>{
 
 ```
 
+# Higher order function (HOF)
+
+* HOF are those functions which full fill either of the two thing
+1. either take the function as an argument
+2. or return the function as its result.
+
 
 
