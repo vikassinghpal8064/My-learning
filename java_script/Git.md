@@ -37,3 +37,6 @@ it will fetch all the commits in the local from origin
 
 It will do two cmd simultaneously git fetch + git merge
 
+10. git log and git log --stat
+
+
