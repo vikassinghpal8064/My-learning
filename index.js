@@ -21,8 +21,27 @@ var Database = /** @class */ (function () {
 
 
 //--------------------------------------------------------------
+// const fs= require("fs");
 
-import {add, multiply} from "./index2.js";
+// let readable= fs.createReadStream("./java_script/Revision.md",{encoding :'utf-8'});
 
-console.log(add(3,4));
-console.log(multiply(3,4));
+// readable.on(("reading",(chunk)=>{
+//     console.log(chunk);
+// }))
+
+const fs = require('fs');
+const path=  require("path");
+//console.log(path.format("/lol"));
+
+const readable = fs.createReadStream('builder.ts', { encoding: 'utf8' });
+
+try{
+    readable.on('data', chunk => {
+  console.log("Received chunk:", chunk);
+
+  readable.o
+});
+}
+catch(err){
+    console.log(err);
+}
