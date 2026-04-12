@@ -28,7 +28,7 @@ console.log(element);
 
 # Recap
 
- * A React Element is the smallest building block of a User Interface.
+* A React Element is the smallest building block of a User Interface.
 * React.createElement() returns an object that we call a React Element.
 * The function signature is: React.createElement(type, options, children).
 * React.createElement("h1", {className: "text--regular"}, "Welcome!") creates an object  
@@ -37,4 +37,37 @@ console.log(element);
 * The main goal of the virtual DOM is to check for updates in memory and to update the DOM only when necessary.
 
 * React creates the virtual representation of your UI in the memory, and then ReactDOM receives that and syncs your UI (and the changes to it) to the DOM. This process is called reconciliation
+
+<break></break>
+
+# Note this , how we render the element in react
+
+note createRoot function
+
+```javascript
+ import React from "react";
+import {createRoot} from "react-dom/client";
+
+const element = React.createElement("p", {}, "Hello World");
+const root = document.getElementById("root");
+
+createRoot(root).render(element);
+```
+
+# starting react project locally
+```bash
+npm create vite@latest
+```
+
+* important extensions to consider
+
+1. Import cost: We already discussed this extension in Chapter 2.
+
+2. Prettier - Code Formatter: A tool that automatically formats your code.
+
+3. ESLint: A tool that checks your code for bugs and style issues.
+
+
+
+
 
