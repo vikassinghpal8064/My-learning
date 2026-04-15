@@ -345,6 +345,21 @@ let id=setInterval(()=>{
 2. or return the function as its result.
 
 
+* note sometimes we don't know now many arguments are passed into the function
+take a look at this example
+```javascript
+function hello(fun, name, age, sirname){
+    fun(1,2,3,4,5,56,6,67);
+    return ` hello ${name} ${sirname}, my age is ${age}`;
+
+}
+function consoling(...args){
+    console.log(args[0],args[1]);
+ console.log([...args]);
+}
+console.log(hello(consoling,"vikas",23,"singh"));
+```
+
 Sure! In JavaScript, **debouncing** and **throttling** are performance optimization techniques used to limit how often a function is 
 executed, especially when it's called repeatedly in a short time, such as during user interactions like scrolling or typing.
 
@@ -354,7 +369,7 @@ executed, especially when it's called repeatedly in a short time, such as during
 
 | Feature     | Debounce                                  | Throttle                                  |
 |-------------|--------------------------------------------|--------------------------------------------|
-| **Behavior**| Waits until no new calls occur for `N` ms before executing | Executes at least once in every `N` ms        |
+| **Behavior**| a programming technique used to ensure that a heavy or expensive function only executes after a specific period of "quiet time" or inactivity | Executes at least once in every `N` ms        |
 | **Use Case**| Event cleanup (e.g., search input)         | Rate-limiting or periodic updates (e.g., scroll) |
 | **Result**  | Delayed, single execution after inactivity | Executes frequently, capped at intervals     |
 
