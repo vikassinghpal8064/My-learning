@@ -12,4 +12,10 @@ ls -l
 ls -a
 ```
 
-## 
+## change directory
+```shell
+cd ..
+
+```
+
+##
