@@ -94,3 +94,32 @@ public class Main
 }
 // it doesnot have size() method in priority queue
 ```
+
+* what if we have a object to insert in the priority queue, not a integer , then the question is how will you campare.
+
+```java
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+PriorityQueue<Obj>pq= new PriorityQueue<>(Comparator.comparing((Obj s)-> s.freq).reversed());
+pq.add(new Obj(1,5));
+pq.add(new Obj(2,3));
+pq.add(new Obj(3,1));
+pq.add(new Obj(4,100));
+
+for (Obj item : pq){
+    System.out.println(item.freq);
+}
+	}
+}
+
+ class Obj{
+    int item ;
+    int freq;
+     Obj(int val1, int val2){
+        item=val1;
+        freq=val2;
+    }
+}
+```
