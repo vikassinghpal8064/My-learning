@@ -48,15 +48,49 @@ public class Main {
 ```
 # what is complete binary tree in java
 
-* A compleete binary tree is the binary tree that has atmost 2 child and the left subtree of parent node  is always smaller then the right sub tree of parent node.
+* A compleete binary tree is the binary tree that must have 2 child or none and the left subtree of parent node  is always smaller then the right sub tree of parent node.
 
 # what is Heap data structure in java
 
-* Heap data structure is also a complete binary tree , but has someunique thing as well . There are MIN heap as well as MAX heap
-![Image shows MIN heap](https://media.geeksforgeeks.org/wp-content/uploads/20241105101737867907/min-heap-1.webp)
+* Heap data structure is also a complete binary tree , but has some unique thing as well . There are MIN heap as well as MAX heap
+!["Image shows MIN heap"](https://media.geeksforgeeks.org/wp-content/uploads/20241105101737867907/min-heap-1.webp)
+
+
 
 ![Image shows MAX heap](https://media.geeksforgeeks.org/wp-content/uploads/20241105101737567635/max-heap-1.webp)
 
-1. In MIN heap notice that each child is larger then its parents and In Max heap each child is smaller then its parents child.
+1. In MIN heap notice that each child is larger or equal  then its parents and In Max heap each child is smaller then its parents child.
 
-2. 
+2. Notice that these are not the Binary tree itself;
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20241105101737995053/min-heap-2.webp)
+
+3. Application of heap is you can get the minimum and maxium value very fast,
+
+# Priority Queue
+
+```java
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	PriorityQueue<Integer>pq= new PriorityQueue<>(Collections.reverseOrder());
+	pq.add(100);
+	pq.add(10); // to add element
+	pq.add(-1);
+	pq.add(4);  // note that here in Collections.reverseOrder(), pq, is reversed
+              // originally , it was minimum value first(means MAX heap);
+	pq.add(0);
+	pq.add(5);
+	pq.remove();
+	for(Integer item : pq){
+	    System.out.println(item);
+	}
+	System.out.println(pq.contains(-1));// to check wheather it 
+	                                    //contains the element or not.
+
+	}
+}
+// it doesnot have size() method in priority queue
+```
