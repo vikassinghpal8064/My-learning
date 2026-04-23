@@ -122,4 +122,15 @@ for (Obj item : pq){
         freq=val2;
     }
 }
+
+priorityQueue<Integer> pqCopy= new PriorityQueue<>(pq); // you put the previous pq into copy
+// please sometimes you need a copy of priority queue
+
 ```
+
+# HashMap in java
+## various methods include
+ 1. hm.keySet()
+ 2. hm.get(key)
+ 3. hm.put(key,value)
+ 4. HashMap<Character, Integer>hm= new HashMap<>();
