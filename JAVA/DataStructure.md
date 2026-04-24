@@ -134,3 +134,25 @@ priorityQueue<Integer> pqCopy= new PriorityQueue<>(pq); // you put the previous 
  2. hm.get(key)
  3. hm.put(key,value)
  4. HashMap<Character, Integer>hm= new HashMap<>();
+
+
+
+ # Strings methods (String builders)
+* Note these methods which are used 80% of the times.
+```java
+import java.util.*
+public class Main{
+public static void main(String [] args){
+    StringBuilder sb= new StringBuilder();
+      // there is no add function in string builder
+    sb.insert(anyString);
+    sb.setCharAt(index,character);
+    sb.append(anyString);
+    sb.toString(); // you can guess what it do
+
+    sb.length();
+    sb.deleteCharAt(index);
+
+}
+}
+```
